@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 20px;
+    text-align: center;
+    color: darkred;
+    padding: 20px;
+}
+
+.description {
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#form input {
+    width: 100%;
+    padding: 10px;
+}
+
+#form button {
+    width: 100%;
+    padding: 10px;
+    background-color: darkred;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#form button:hover {
+    background-color: red;
+}
+
+.btn {
+    padding: 10px;
+    background-color: darkred;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+p {
+    text-align: center;
+    padding: 20px;
+}

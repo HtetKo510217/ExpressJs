@@ -4,6 +4,10 @@ const app = express();
 const postRouter = require('./routers/postRoute');
 const adminRouter = require('./routers/adminRoute');
 
+// public folder
+app.use(express.static(path.join(__dirname,"public")));
+
+// middleware
 app.use((req,res,next)=> {
     console.log('testing middleware in express');
     next();
