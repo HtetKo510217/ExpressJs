@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Express js</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-    <h1>Welcome to Post page</h1>
-    <input type="text">
-    <button>Submit</button>
+    <h1 class="title">Create a new post</h1>
+    <form id="form" method="post" action="/admin/create-post">
+        <input type="text" class="formInput" name="postTitle">
+        <textarea type="text" class="formInput" name="postContent" rows="10" cols="30"></textarea>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>

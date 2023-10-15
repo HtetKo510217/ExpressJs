@@ -1,11 +1,16 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
+
 const app = express();
 const postRouter = require('./routers/postRoute');
-const adminRouter = require('./routers/adminRoute');
+const {adminRouter} = require('./routers/adminRoute');
 
 // public folder
 app.use(express.static(path.join(__dirname,"public")));
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
 
 // middleware
 app.use((req,res,next)=> {
@@ -13,15 +18,11 @@ app.use((req,res,next)=> {
     next();
 })
 
-// home page
-app.get('/',(req,res)=> {
-    res.sendFile(path.join(__dirname,"views","homePage.html"));
-})
-
 // admin Router
 app.use('/admin',adminRouter);
-// post Router
-app.use('/post',postRouter);
+
+// post Router home page
+app.use(postRouter);
 
 app.listen(3000,()=> {
     console.log('server is running at port 3000');
