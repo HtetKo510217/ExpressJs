@@ -64,3 +64,23 @@ p {
     text-align: center;
     padding: 20px;
 }
+
+.card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid darkred;
+}
+
+.card .title {
+    font-size: 20px;
+    text-align: center;
+    color: darkred;
+    padding: 10px;
+}
+
+.card .description {
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+}

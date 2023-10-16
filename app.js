@@ -3,6 +3,9 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 const app = express();
+app.set('view engine','ejs');
+app.set('views','views');
+
 const postRouter = require('./routers/postRoute');
 const {adminRouter} = require('./routers/adminRoute');
 

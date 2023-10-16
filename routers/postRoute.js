@@ -4,8 +4,8 @@ const {posts} = require('./adminRoute');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    console.log(posts,'from home page');
-    res.sendFile(path.join(__dirname,"..",'views', 'homePage.html'));
+    // res.sendFile(path.join(__dirname,"..",'views', 'homePage.html'));
+    res.render('homePage', {title: 'Home Page', posts});
 })
 
 module.exports = router
